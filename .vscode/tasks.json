@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🏗️ Build Backend",
+            "type": "shell",
+            "command": "mvn",
+            "args": [
+                "clean",
+                "compile",
+                "package"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "▶️ Run Backend Server",
+            "type": "shell",
+            "command": "mvn",
+            "args": [
+                "jetty:run"
+            ],
+            "group": "none",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "🔧 Compile Java Only",
+            "type": "shell",
+            "command": "mvn",
+            "args": [
+                "compile"
+            ],
+            "group": "build"
+        }
+    ]
+}

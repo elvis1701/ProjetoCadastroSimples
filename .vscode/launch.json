@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "🔷 Launch Backend Java",
+            "request": "launch",
+            "mainClass": "com.sistema.MainServer",  // Sua classe main
+            "projectName": "cadastro-backend",
+            "args": [],
+            "env": {
+                "DB_URL": "jdbc:mariadb://localhost:3306/sistema_cadastro",
+                "DB_USER": "root",
+                "DB_PASSWORD": "sua_senha"
+            },
+            "console": "internalConsole",
+            "stopOnEntry": false
+        },
+        {
+            "type": "java",
+            "name": "🔧 Debug Backend Java",
+            "request": "launch",
+            "mainClass": "com.sistema.MainServer",
+            "projectName": "cadastro-backend",
+            "stopOnEntry": false
+        },
+        {
+            "name": "🌐 Launch Frontend",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/frontend/dev-server.js",
+            "cwd": "${workspaceFolder}/frontend"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "🚀 Launch Full Stack",
+            "configurations": ["🔷 Launch Backend Java", "🌐 Launch Frontend"],
+            "stopAll": true
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    // CONFIGURAÇÕES ESPECÍFICAS DO JAVA
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
+    
+    // CONFIGURAÇÕES DO MAVEN
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "C:/Program Files/Java/jdk-17"  // AJUSTE SEU CAMINHO
+        }
+    ],
+    "maven.executable.path": "mvn",
+    
+    // CONFIGURAÇÕES DO PROJETO
+    "files.exclude": {
+        "**/target": true,           // Oculta pasta target do Java
+        "**/node_modules": true,     // Oculta node_modules
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    
+    // CONFIGURAÇÕES DE LINGUAGEM
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    
+    "[html]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    
+    "[css]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    
+    // CONFIGURAÇÕES GERAIS DO EDITOR
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "editor.wordWrap": "on",
+    
+    // CONFIGURAÇÕES DE TERMINAL
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    
+    // CONFIGURAÇÕES DE DEBUG
+    "debug.onTaskErrors": "showErrors",
+    
+    // CONFIGURAÇÕES DE ARQUIVOS
+    "files.autoSave": "onFocusChange",
+    "files.encoding": "utf8",
+    
+    // CONFIGURAÇÕES DE GIT (se usar)
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true
+}
